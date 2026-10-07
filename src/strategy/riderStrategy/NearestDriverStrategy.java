@@ -1,5 +1,6 @@
-package strategy;
+package strategy.riderStrategy;
 
+import helper.Utils;
 import model.Driver;
 import model.Location;
 import model.Rider;
@@ -13,19 +14,12 @@ public class NearestDriverStrategy implements RideMatchingStrategy{
         double nearestDistance = Integer.MAX_VALUE;
         for (Driver driver : drivers) {
             Location driverLoc = driver.getCurrentLocation();
-            double distance = getDistance(driverLoc, rider.getLocation());
+            double distance = Utils.getDistance(driverLoc, rider.getLocation());
             if (nearestDistance > distance) {
                 nearestDriver = driver;
                 nearestDistance = distance;
             }
         }
         return nearestDriver;
-    }
-
-    private double getDistance(Location location1, Location location2) {
-        double xCoordinate = location2.getLatitude() - location1.getLatitude();
-        double yCoordinate = location2.getLongitude() - location1.getLongitude();
-
-        return Math.sqrt(Math.pow(xCoordinate, 2) + Math.pow(yCoordinate, 2));
     }
 }

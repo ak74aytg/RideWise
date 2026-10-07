@@ -1,8 +1,8 @@
 package exception;
 
-public class NoDriverAvailableException extends IllegalArgumentException{
+public class InvalidUserNameException extends IllegalArgumentException{
     @Override
     public String getMessage() {
-        return "No driver exist with this id";
+        return "Name cannot be empty or null.";
     }
 }

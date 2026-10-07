@@ -1,7 +1,6 @@
-package strategy;
+package strategy.riderStrategy;
 
 import model.Driver;
-import model.Ride;
 import model.Rider;
 
 import java.time.LocalDateTime;

@@ -1,8 +1,8 @@
 package exception;
 
-public class NoDriverAvailableException extends IllegalArgumentException{
+public class NoRiderAvailableException extends IllegalArgumentException{
     @Override
     public String getMessage() {
-        return "No driver exist with this id";
+        return "No rider exist with this id";
     }
 }

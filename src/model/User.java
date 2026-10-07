@@ -1,5 +1,22 @@
+package model;
+
+import helper.IdGenerator;
+
+
 public class User {
     private Integer id;
     private String name;
-    private Integer age;
+
+    public User(String name) {
+        this.id = IdGenerator.getRandomId();
+        this.name = name;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

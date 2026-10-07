@@ -1,4 +1,4 @@
-package strategy;
+package strategy.riderStrategy;
 
 import model.Driver;
 import model.Rider;

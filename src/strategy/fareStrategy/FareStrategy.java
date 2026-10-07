@@ -1,4 +1,4 @@
-package strategy;
+package strategy.fareStrategy;
 
 import model.Ride;
 
